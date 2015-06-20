@@ -31,10 +31,10 @@ Typically you'll just want to provide files in the standard Grunt way.
 
 ```js
 hercule: {
-    docs: {
-        src: 'path/to/your/blueprint.md',
-        dest: 'path/to/dest.md'
-    }
+	docs: {
+		src: 'path/to/your/blueprint.md',
+		dest: 'path/to/dest.md'
+	}
 }
 ```
 
