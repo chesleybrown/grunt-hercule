@@ -8,14 +8,25 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		tabs4life: {
 			self: {
+				options: {
+					jshint: {
+						mocha: true
+					}
+				},
 				src: [
 					'.gitignore',
 					'Gruntfile.js',
 					'LICENSE',
 					'tasks/**/*.js',
 					'README.md',
-					'test/*.js'
+					'test/**/*.js'
 				]
+			}
+		},
+		hercule: {
+			example: {
+				src: 'node_modules/hercule/examples/api-blueprint/gist-fox.apib',
+				dest: '.grunt/gist-fox.md'
 			}
 		}
 	});
