@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 			
 			grunt.log.write(src);
 			grunt.log.write(' >> '.green);
-			grunt.log.write(dest);
+			grunt.log.writeln(dest);
 			
 			done();
 		});

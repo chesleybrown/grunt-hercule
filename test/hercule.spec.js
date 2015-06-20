@@ -25,8 +25,9 @@ describe('Grunt hercule', function () {
 		});
 		
 		it('should output src and dest', function () {
-			expect(output).to.contain(examplesDir + '/gist-fox.apib');
-			expect(output).to.contain('.grunt/gist-fox.md');
+			expect(output).to.contain('\n' + examplesDir + '/gist-fox.apib');
+			expect(output).to.contain('.grunt/gist-fox.md\n\n');
+			expect(output).to.contain('Done, without errors.');
 		});
 		it('should have gist.json in doc', function () {
 			expect(doc).to.contain('"id": "42",');
