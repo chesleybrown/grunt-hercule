@@ -5,7 +5,7 @@ grunt-hercule
 [![devDependency Status](https://david-dm.org/chesleybrown/grunt-hercule/dev-status.svg)](https://david-dm.org/chesleybrown/grunt-hercule#info=devDependencies)
 [![NPM version](https://badge.fury.io/js/grunt-hercule.svg)](http://badge.fury.io/js/grunt-hercule)
 
-Grunt task that wraps hercule for simple document transclusion, ideal for Markdown documents.
+Grunt task that wraps [Hercule](https://github.com/jamesramsay/hercule) for simple document transclusion, ideal for Markdown documents.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.2`
