@@ -1,6 +1,6 @@
 'use strict';
 
-var hercule = require('hercule/lib/transclude');
+var hercule = require('hercule');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('hercule', function () {
@@ -13,16 +13,20 @@ module.exports = function (grunt) {
 		var src = this.filesSrc[0];
 		var dest = this.data.dest;
 		
-		hercule.transclude(src, null, null, null, function (err, doc) {
-			!err || grunt.fail.fatal(err);
-			
-			grunt.file.write(dest, doc);
-			
-			grunt.log.write(src);
-			grunt.log.write(' >> '.green);
-			grunt.log.writeln(dest);
-			
-			done();
-		});
+		hercule.transcludeFile(src,
+			function callback(doc) {
+				// FIXME: unsure how to detect transclusion error since only output
+				// string is passed in.
+				// !err || grunt.fail.fatal(err);
+				
+				grunt.file.write(dest, doc);
+				
+				grunt.log.write(src);
+				grunt.log.write(' >> '.green);
+				grunt.log.writeln(dest);
+				
+				done();
+			}
+		);
 	});
 };

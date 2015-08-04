@@ -20,7 +20,7 @@
 	},
 	"dependencies": {
 		"grunt-tabs4life": "^1.0.11",
-		"hercule": "^0.2.3"
+		"hercule": "^1.2.1"
 	},
 	"devDependencies": {
 		"chai": "^3.0.0",
