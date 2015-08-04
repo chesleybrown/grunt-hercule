@@ -14,6 +14,9 @@ module.exports = function (grunt) {
 		var dest = this.data.dest;
 		
 		hercule.transcludeFile(src,
+			function logger(msg) {
+				grunt.verbose.writeln(msg);
+			},
 			function callback(doc) {
 				// FIXME: unsure how to detect transclusion error since only output
 				// string is passed in.
