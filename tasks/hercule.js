@@ -18,10 +18,6 @@ module.exports = function (grunt) {
 				grunt.verbose.writeln(msg);
 			},
 			function callback(doc) {
-				// FIXME: unsure how to detect transclusion error since only output
-				// string is passed in.
-				// !err || grunt.fail.fatal(err);
-				
 				grunt.file.write(dest, doc);
 				
 				grunt.log.write(src);
