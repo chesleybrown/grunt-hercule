@@ -7,7 +7,7 @@ var execOptions = {
 	cwd: path.join(__dirname, '..')
 };
 var fs = require('fs');
-var examplesDir = 'node_modules/hercule/examples/api-blueprint';
+var examplesDir = 'test/fixtures/api-blueprint';
 
 describe('Grunt hercule', function () {
 	this.timeout(5000);

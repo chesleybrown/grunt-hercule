@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 		},
 		hercule: {
 			example: {
-				src: 'node_modules/hercule/examples/api-blueprint/gist-fox.apib',
+				src: 'test/fixtures/api-blueprint/gist-fox.apib',
 				dest: '.grunt/gist-fox.md'
 			}
 		}
