@@ -1,35 +1,36 @@
 {
-	"name": "grunt-hercule",
-	"description": "Grunt task that wraps hercule for simple document transclusion, ideal for Markdown documents.",
-	"version": "1.0.3",
-	"author": {
-		"name": "Chesley Brown",
-		"email": "me@chesleybrown.ca",
-		"url": "http://www.chesleybrown.ca"
-	},
-	"engines": {
-		"node": ">=0.12.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/chesleybrown/grunt-hercule.git"
-	},
-	"license": "MIT",
-	"scripts": {
-		"test": "grunt && mocha"
-	},
-	"dependencies": {
-		"grunt-tabs4life": "^1.0.11",
-		"hercule": "^3.0.2"
-	},
-	"devDependencies": {
-		"chai": "^3.0.0",
-		"grunt": "^0.4.5",
-		"grunt-cli": "^0.1.13",
-		"load-grunt-tasks": "^3.1.0",
-		"mocha": "^2.0.1"
-	},
-	"files": [
-		"tasks"
-	]
+  "name": "grunt-hercule",
+  "description": "Grunt task that wraps hercule for simple document transclusion, ideal for Markdown documents.",
+  "version": "1.0.3",
+  "author": {
+    "name": "Chesley Brown",
+    "email": "me@chesleybrown.ca",
+    "url": "http://www.chesleybrown.ca"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chesleybrown/grunt-hercule.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "grunt && mocha"
+  },
+  "dependencies": {
+    "grunt-tabs4life": "^1.0.11",
+    "hercule": "^3.0.2",
+    "pegjs": "^0.9.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "load-grunt-tasks": "^3.1.0",
+    "mocha": "^2.0.1"
+  },
+  "files": [
+    "tasks"
+  ]
 }
