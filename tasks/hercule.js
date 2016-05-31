@@ -2,6 +2,7 @@
 
 var hercule = require('hercule');
 var path = require('path')
+var fs = require('fs')
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('hercule', function () {
@@ -16,19 +17,13 @@ module.exports = function (grunt) {
 					if (err) {
 						grunt.log.error("Hercule error while processing: " + f.src[0])
 						grunt.log.verbose.error(err)
-						console.log(err.message)
 					} else {
 						grunt.file.write(path.join(process.cwd(), f.dest), output);
 					}
 
 					num_files = num_files - 1
 
-					// grunt.log.write(f.src[0]);
-					// grunt.log.write(' >> '.green);
-					// grunt.log.writeln(f.dest);
-
 					if (num_files == 0) done();
-
 
 				}
 			);
