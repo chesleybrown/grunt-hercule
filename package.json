@@ -26,6 +26,9 @@
     "chai": "^3.0.0",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-jscs": "^2.8.0",
+    "grunt-lintspaces": "^0.8.0",
     "load-grunt-tasks": "^3.1.0",
     "mocha": "^2.0.1"
   },
