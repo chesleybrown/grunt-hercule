@@ -17,6 +17,9 @@ module.exports = function (grunt) {
 					}
 					else {
 						grunt.file.write(path.join(process.cwd(), f.dest), output);
+						grunt.log.write(f.src[0]);
+						grunt.log.write(' >> '.green);
+						grunt.log.writeln(f.dest);
 					}
 					numFiles = numFiles - 1;
 					if (numFiles === 0) {
