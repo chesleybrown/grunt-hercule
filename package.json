@@ -1,7 +1,7 @@
 {
   "name": "grunt-hercule",
   "description": "Grunt task that wraps hercule for simple document transclusion, ideal for Markdown documents.",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "author": {
     "name": "Chesley Brown",
     "email": "me@chesleybrown.ca",
