@@ -1,31 +1,32 @@
 'use strict';
 
 var hercule = require('hercule');
+var path = require('path');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('hercule', function () {
 		var done = this.async();
-		
-		if (this.filesSrc.length != 1) {
-			grunt.fail.fatal('You must provide only one src file.');
-		}
-		
-		var src = this.filesSrc[0];
-		var dest = this.data.dest;
-		
-		hercule.transcludeFile(src,
-			function logger(msg) {
-				grunt.verbose.writeln(msg);
-			},
-			function callback(doc) {
-				grunt.file.write(dest, doc);
-				
-				grunt.log.write(src);
-				grunt.log.write(' >> '.green);
-				grunt.log.writeln(dest);
-				
-				done();
-			}
-		);
+		var numFiles = this.files.length;
+		this.files.forEach(function (f) {
+			hercule.transcludeFile(f.src[0],
+				{relativePath: path.dirname(path.join(process.cwd(), f.src[0]))},
+				function callback(err, output) {
+					if (err) {
+						grunt.log.error('Hercule error while processing: ' + f.src[0]);
+						grunt.log.verbose.error(err);
+					}
+					else {
+						grunt.file.write(path.join(process.cwd(), f.dest), output);
+						grunt.log.write(f.src[0]);
+						grunt.log.write(' >> '.green);
+						grunt.log.writeln(f.dest);
+					}
+					numFiles = numFiles - 1;
+					if (numFiles === 0) {
+						done();
+					}
+				}
+			);
+		});
 	});
 };
